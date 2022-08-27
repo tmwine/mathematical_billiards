@@ -1,24 +1,24 @@
-These are some basic geometric routines in R2 for the unfolding of triangles in the context of mathematical billiards trajectories. See the associated [github.io page](link) for details.
+These are some basic geometric routines in R<sup>2</sup> for the unfolding of triangles in the context of mathematical billiards trajectories. See the associated [github.io page](link) for details.
 
 In general, references to (x,theta) coordinates mean the following. A given triangle is oriented so that its longest side, its "base side," is along the x-axis, with the side's left endpoint at the origin. The other two sides of the triangle are in the +y halfplane. A billiard trajectory in this triangle is specified by its (x,theta) coordinates, where x is the trajectory's foot point on the triangle's base side, and theta is the angle made by the trajectory with respect to the +x axis, with theta in (0,pi).
 
 
 ## Unfoldings and discontinuity boundaries
 
-The triangle_unfold_trajectory.py file will plot the unfolding of a given triangle along a given trajectory. [figure?]
+The triangle_unfold_trajectory.py file will plot the unfolding of a given triangle along a given trajectory.
 
 The triangle_discontinuity_arcs.py file will show discontinuity boundaries after a given number of unfoldings for a given triangle and a given phase space window in (x,theta) space. The triangle is specified by its interior angles, plus the length of its base side. The phase space window is specified by an x-axis subinterval within the base side segment, and a theta radial interval within (0,pi).
 
 The triangle_discontinuity_arcs routine tracks all possible unfolding paths within the phase space window, and checks the sightline from vertex to base segment by using a convex hull reduction on the path of unfolded segments. This greatly speeds processing time.
 
-![closeup of discontinuity boundary cells for unfolding of 3,4,5 triangle](https://github.com/tmwine/mathematical_billiards/images/3_4_5_closeup.png?raw=true)
+![closeup of discontinuity boundary cells for unfolding of 3,4,5 triangle]([https://github.com/tmwine/mathematical_billiards/images/3_4_5_closeup.png](https://github.com/tmwine/mathematical_billiards/blob/main/images/3_4_5_closeup.png)?raw=true)
 
-Though probably not as important, also included is the arcs_to_polygons.py file. This allows rendering the output of triangle_discontinuity_arcs as a set of adjacent polygons in (x,cotangent(theta)) phase space (after including the phase space boundary rectangle). The polygon data allows rendering the discontinuity cells as vector graphics files. The arcs_to_polygons routine requires the sweep_line module and its two AVL tree modules. These are available [nearby](link).
+Though probably not as important, also included is the arcs_to_polygons.py file. This allows rendering the output of triangle_discontinuity_arcs as a set of adjacent polygons in (x,cotangent(theta)) phase space (after including the phase space boundary rectangle). The polygon data allows rendering the discontinuity cells as vector graphics files. The arcs_to_polygons routine requires the sweep_line module and its two AVL tree modules. These are available [nearby]([link](https://github.com/tmwine/proximal_BentleyOttmann_variation)).
 
 
 ## Bounce sequences and color plots
 
-![closeup of 1,2,7 triangle, near angle pi/2](https://github.com/tmwine/mathematical_billiards/images/1_2_7_closeup_4.png?raw=true)
+![closeup of 1,2,7 triangle, near angle pi/2]([https://github.com/tmwine/mathematical_billiards/images/1_2_7_closeup_4.png](https://github.com/tmwine/mathematical_billiards/blob/main/images/1_2_7_closeup_4.png)?raw=true)
 
 To create the bounce sequence plots of the [github.io page](link), bounce sequences may first be generated with the billiard_bounce_sequences.jl file. This requires Julia, and its DynamicalBilliards package. The Julia routine runs from the command line as follows:
 ```
@@ -60,7 +60,7 @@ Octave is helpful for rendering bounce sequence value files as a color plot, but
 
 This author's code is licensed under the MIT license.
 
-The code in arcs_to_polygons uses AVL trees in its sweep_line routine from the neighboring repo. The AVL trees are from another 3rd party repo, under the MIT license. See the sweep_line repo for details.
+The code in arcs_to_polygons uses AVL trees in its sweep_line routine from the neighboring [repo](https://github.com/tmwine/proximal_BentleyOttmann_variation). The AVL trees are from another 3rd party repo, under the MIT license. See the sweep_line repo for details.
 
 
 
