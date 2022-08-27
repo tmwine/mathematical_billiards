@@ -29,7 +29,7 @@ The triangle's coordinates are first specified (quotes required), where the tria
 To process the output file of the Julia routine, three measures are available to convert symbolic sequences into real values:
 - angular_sequence_measure.py--this is the simple, order-not-important measure of symbol proportionality; higher values correspond to more equal proportions
 - lempel_ziv_measure.py--this is a variant of LZ77 compression; higher values correspond to greater compression; (this routine may be somewhat slow when fed a large number of sequences)
-- MultAlpha_Fast_File_Batch.cpp--the matrix measure (needs compiling); it uses the companion file MiP_1_1_1_hk_4.bin, which has the basic 3-symbol 6x6 equiprobable matrices encoded in it (generated from [this](link) neighboring repo); to run, compile the .cpp file and assuming the executable is named MultAlpha_Fast_File_Batch, run from the command line as follows:
+- MultAlpha_Fast_File_Batch.cpp--the matrix measure (needs compiling); it uses the companion file MiP_1_1_1_hk_4.bin, which has the basic 3-symbol 6x6 equiprobable matrices encoded in it (generated from [this](https://github.com/tmwine/matrix-sequence-regularity) neighboring repo); to run, compile the .cpp file and assuming the executable is named MultAlpha_Fast_File_Batch, run from the command line as follows:
 ```
 $ .<path to>/MultAlpha_Fast_File_Batch <path to>/MiP_1_1_1_hk_4.bin <path to>/measure_output_filename
 ```
