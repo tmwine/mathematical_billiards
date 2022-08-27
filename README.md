@@ -11,7 +11,7 @@ The triangle_discontinuity_arcs.py file will show discontinuity boundaries after
 
 The triangle_discontinuity_arcs routine tracks all possible unfolding paths within the phase space window, and checks the sightline from vertex to base segment by using a convex hull reduction on the path of unfolded segments. This greatly speeds processing time.
 
-![closeup of discontinuity boundary cells for unfolding of 3,4,5 triangle](https://github.com/tmwine/mathematical_billiards/blob/main/images/3_4_5_closeup.png?raw=true)
+![closeup of discontinuity boundary cells for unfolding of 3,4,5 triangle](https://github.com/tmwine/mathematical_billiards/blob/main/images/3_4_5_closeup_2.png?raw=true)
 
 Though probably not as important, also included is the arcs_to_polygons.py file. This allows rendering the output of triangle_discontinuity_arcs as a set of adjacent polygons in (x,cotangent(theta)) phase space (after including the phase space boundary rectangle). The polygon data allows rendering the discontinuity cells as vector graphics files. The arcs_to_polygons routine requires the sweep_line module and its two AVL tree modules. These are available [nearby](https://github.com/tmwine/proximal_BentleyOttmann_variation).
 
@@ -49,6 +49,7 @@ where num_ang and num_pos are the respective dimensions of the angle and x posit
 ## Dependencies
 
 matplotlib, but only necessary if wanting intermediary visualizations
+
 numpy
 
 Julia is needed only if using the bounce sequence generating routine.
