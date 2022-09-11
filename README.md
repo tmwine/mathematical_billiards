@@ -1,4 +1,4 @@
-These are some basic geometric routines in R<sup>2</sup> for the unfolding of triangles in the context of mathematical billiards trajectories. See the associated [github.io page](link) for details.
+These are some basic geometric routines in R<sup>2</sup> for the unfolding of triangles in the context of mathematical billiards trajectories. See the associated [github.io page](https://tmwine.github.io/2022/07/10/triangular-billiards.html) for details.
 
 In general, references to (x,theta) coordinates mean the following. A given triangle is oriented so that its longest side, its "base side," is along the x-axis, with the side's left endpoint at the origin. The other two sides of the triangle are in the +y halfplane. A billiard trajectory in this triangle is specified by its (x,theta) coordinates, where x is the trajectory's foot point on the triangle's base side, and theta is the angle made by the trajectory with respect to the +x axis, with theta in (0,pi).
 
@@ -20,7 +20,7 @@ Though probably not as important, also included is the arcs_to_polygons.py file.
 
 ![closeup of 1,2,7 triangle, near angle pi/2](https://github.com/tmwine/mathematical_billiards/blob/main/images/1_2_7_closeup_4.png?raw=true)
 
-To create the bounce sequence plots of the [github.io page](link), bounce sequences may first be generated with the billiard_bounce_sequences.jl file. This requires Julia, and its DynamicalBilliards package. The Julia routine runs from the command line as follows:
+To create the bounce sequence plots of the [github.io page](https://tmwine.github.io/2022/07/10/triangular-billiards.html), bounce sequences may first be generated with the billiard_bounce_sequences.jl file. This requires Julia, and its DynamicalBilliards package. The Julia routine runs from the command line as follows:
 ```
 $ julia billiard_bounce_sequences.jl "[[x1,y1],[x2,y2],[x3,y3]]" low_theta:theta_step:high_theta low_x:x_step:high_x sequence_length
 ```
